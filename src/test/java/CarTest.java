@@ -18,6 +18,16 @@ public class CarTest {
     }
 
     @Test
+    void canReduceSpeed() {
+        assertThat(car.reduceSpeed()).isEqualTo("This car is reducing it's speed");
+    }
+
+    @Test
+    void canDrive() {
+        assertThat(car.drive()).isEqualTo("This car is driven around town");
+    }
+
+    @Test
     void canGetMake() {
         assertThat(car.getMake()).isEqualTo("BMW");
     }

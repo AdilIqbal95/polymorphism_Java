@@ -14,18 +14,38 @@ public class PlaneTest {
 
     @Test
     void canTakeoff() {
-        plane.takeoff(10000);
+        plane.takeoff();
         assertThat(plane.getFlightHeight()).isEqualTo(10000);
     }
 
     @Test
+    void canTakeoff__toSpecificHeight() {
+        plane.takeoff(7000);
+        assertThat(plane.getFlightHeight()).isEqualTo(7000);
+    }
+
+
+    @Test
     void canLand() {
+        plane.takeoff();
+        plane.land();
         assertThat(plane.getFlightHeight()).isEqualTo(0);
     }
 
     @Test
     void canAccelerate() {
         assertThat(plane.accelerate()).isEqualTo("Vehicle is accelerating");
+    }
+
+    @Test
+    void canReduceSpeed() {
+        assertThat(plane.reduceSpeed()).isEqualTo("This plane is reducing it's speed");
+    }
+
+
+    @Test
+    void canDrive() {
+        assertThat(plane.drive()).isEqualTo("This plane is driven whilst at the airport");
     }
 
     @Test
@@ -51,12 +71,6 @@ public class PlaneTest {
     @Test
     void canGetPrice() {
         assertThat(plane.getPrice()).isEqualTo(8_500_000);
-    }
-
-    @Test
-    void canSetFlightHeight() {
-        plane.setFlightHeight(6000);
-        assertThat(plane.getFlightHeight()).isEqualTo(6000);
     }
 
     @Test

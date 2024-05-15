@@ -1,4 +1,4 @@
-public class Yacht extends Vehicle{
+public class Yacht extends Vehicle {
 
     private int noOfRooms;
 
@@ -11,6 +11,10 @@ public class Yacht extends Vehicle{
         return "Life boat deployed";
     }
 
+    @Override
+    public String reduceSpeed() {
+        return "This yacht is reducing it's speed";
+    }
 
 //    getters and setters
     public int getNoOfRooms() {

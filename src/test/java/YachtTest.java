@@ -24,6 +24,12 @@ public class YachtTest {
     }
 
     @Test
+    void canReduceSpeed() {
+        assertThat(yacht.reduceSpeed()).isEqualTo("This yacht is reducing it's speed");
+    }
+
+
+    @Test
     void canGetNoOfRooms() {
         assertThat(yacht.getNoOfRooms()).isEqualTo(2);
     }

@@ -17,6 +17,9 @@ public abstract class Vehicle {
         return "Vehicle is accelerating";
     }
 
+    public abstract String reduceSpeed();
+
+
 //    getters and setters
 
     public String getMake() {
